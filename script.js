@@ -1,4 +1,3 @@
-// Load JSON data
 fetch('ships.json')
   .then(response => response.json())
   .then(data => {
@@ -6,8 +5,8 @@ fetch('ships.json')
     const shipsContainer = document.getElementById('ships-container');
     const searchInput = document.getElementById('search');
 
-    // Populate sidebar with ship classes
-    for (let shipClass in data) {
+    // Sidebar
+    Object.keys(data).forEach((shipClass, index) => {
       const li = document.createElement('li');
       li.textContent = shipClass;
       li.addEventListener('click', () => {
@@ -16,17 +15,23 @@ fetch('ships.json')
         displayShips(shipClass);
       });
       typeList.appendChild(li);
-    }
 
-    // Display ships for a given class
+      // First class active
+      if (index === 0) {
+        li.classList.add('active');
+        displayShips(shipClass);
+      }
+    });
+
     function displayShips(shipClass) {
       shipsContainer.innerHTML = '';
       const classData = data[shipClass];
+      if (!classData) return;
 
-      for (let shipName in classData) {
+      Object.keys(classData).forEach(shipName => {
         const shipVariants = classData[shipName];
+        if (!shipVariants) return;
 
-        // Create main ship card
         const shipCard = document.createElement('div');
         shipCard.className = 'ship-card';
 
@@ -34,13 +39,12 @@ fetch('ships.json')
         title.textContent = shipName;
         shipCard.appendChild(title);
 
-        // Variants container (flex display)
         const variantsContainer = document.createElement('div');
         variantsContainer.className = 'variants-container';
 
-        // Loop through variants
-        for (let variantName in shipVariants) {
+        Object.keys(shipVariants).forEach(variantName => {
           const levels = shipVariants[variantName];
+          if (!Array.isArray(levels)) return;
 
           const variantCard = document.createElement('div');
           variantCard.className = 'variant-card';
@@ -60,14 +64,14 @@ fetch('ships.json')
 
           variantCard.appendChild(statsList);
           variantsContainer.appendChild(variantCard);
-        }
+        });
 
         shipCard.appendChild(variantsContainer);
         shipsContainer.appendChild(shipCard);
-      }
+      });
     }
 
-    // Search functionality
+    // Search
     searchInput.addEventListener('input', () => {
       const query = searchInput.value.toLowerCase();
       shipsContainer.querySelectorAll('.ship-card').forEach(card => {
@@ -75,12 +79,5 @@ fetch('ships.json')
         card.style.display = name.includes(query) ? '' : 'none';
       });
     });
-
-    // Initially display the first ship class
-    const firstClass = Object.keys(data)[0];
-    if (firstClass) {
-      typeList.querySelector('li').classList.add('active');
-      displayShips(firstClass);
-    }
   })
   .catch(err => console.error('Error loading ship data:', err));
