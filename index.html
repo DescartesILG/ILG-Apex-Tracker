@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ILG Apex Tracker</title>
+<style>
+body { font-family:sans-serif; margin:0; padding:0; display:flex; }
+aside { width:200px; background:#eee; padding:10px; }
+main { flex:1; padding:10px; }
+.ship-card { border:1px solid #ccc; margin:5px; padding:5px; }
+.variant-card { margin-left:10px; padding:5px; border-left:2px solid #aaa; }
+ul { list-style:none; padding-left:0; }
+li { cursor:pointer; padding:3px 0; }
+li.active { font-weight:bold; color:blue; }
+input#search { width:100%; margin-bottom:10px; padding:3px; }
+</style>
+</head>
+<body>
+<aside>
+  <h3>Ship Classes</h3>
+  <ul id="type-list"></ul>
+</aside>
+<main>
+  <input type="text" id="search" placeholder="Search ships...">
+  <div id="ships-container"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
