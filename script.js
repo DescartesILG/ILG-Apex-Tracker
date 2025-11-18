@@ -34,7 +34,7 @@ fetch('ships.json')
         title.textContent = shipName;
         shipCard.appendChild(title);
 
-        // Variants container
+        // Variants container (flex display)
         const variantsContainer = document.createElement('div');
         variantsContainer.className = 'variants-container';
 
