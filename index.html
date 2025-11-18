@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ILG Apex Tracker</title>
 <style>
-  /* General body */
   body {
     font-family: Georgia, serif;
     margin: 0;
-    padding: 0;
     display: flex;
     height: 100vh;
   }
@@ -17,32 +15,21 @@
   /* Sidebar */
   aside {
     width: 220px;
-    background: #333;       /* dark gray */
-    color: #eee;            /* light text */
+    background: #333;
+    color: #eee;
     padding: 15px;
     box-sizing: border-box;
     overflow-y: auto;
   }
 
-  aside h3 {
-    margin-top: 0;
-  }
-
-  aside ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
+  aside h3 { margin-top: 0; }
+  aside ul { list-style: none; padding-left: 0; }
   aside li {
     cursor: pointer;
     padding: 6px 0;
     border-bottom: 1px solid #444;
   }
-
-  aside li.active {
-    font-weight: bold;
-    color: #ffd700;  /* gold highlight */
-  }
+  aside li.active { font-weight: bold; color: #ffd700; }
 
   /* Main content */
   main {
@@ -71,18 +58,14 @@
     background: #f9f9f9;
   }
 
-  .ship-card h4 {
-    margin: 0 0 10px 0;
-  }
+  .ship-card h4 { margin: 0 0 10px 0; }
 
-  /* Variant container */
   .variants-container {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
   }
 
-  /* Individual variant cards */
   .variant-card {
     border: 1px solid #aaa;
     border-radius: 4px;
@@ -97,15 +80,22 @@
     font-weight: bold;
   }
 
-  .variant-card ul {
-    padding-left: 15px;
-    margin: 0;
-  }
-
-  .variant-card li {
-    font-size: 13px;
-    margin-bottom: 2px;
-  }
+  .variant-card ul { padding-left: 15px; margin: 0; }
+  .variant-card li { font-size: 13px; margin-bottom: 2px; }
 </style>
 </head>
-<b
+<body>
+
+<aside>
+  <h3>Ship Classes</h3>
+  <ul id="type-list"></ul>
+</aside>
+
+<main>
+  <input type="text" id="search" placeholder="Search ships...">
+  <div id="ships-container"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
