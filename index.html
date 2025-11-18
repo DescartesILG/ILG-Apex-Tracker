@@ -78,8 +78,8 @@
   .ship-card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px 15px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
     transition: transform 0.1s;
     background: #fafafa;
@@ -90,24 +90,41 @@
     box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
   }
 
+  /* Variants container */
+  .variants-container {
+    display: flex;
+    gap: 10px; /* spacing between variants */
+    margin-top: 10px;
+  }
+
   .variant-card {
-    margin-left: 15px;
-    padding: 8px 10px;
-    border-left: 3px solid #888;
-    background: #f4f4f4;
+    flex: 1; /* each variant takes equal width */
+    border: 1px solid #888;
     border-radius: 5px;
+    padding: 8px;
+    background: #f4f4f4;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .variant-card strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95em;
   }
 </style>
 </head>
 <body>
+
 <aside>
   <h3>Ship Classes</h3>
   <ul id="type-list"></ul>
 </aside>
+
 <main>
   <input type="text" id="search" placeholder="Search ships...">
   <div id="ships-container"></div>
 </main>
+
 <script src="script.js"></script>
 </body>
 </html>
