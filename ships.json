@@ -2,181 +2,23 @@
   "Battleship": {
     "Warspite": {
       "Warspite-A": [
-        {"level":0,"hp":500000},
-        {"level":5,"hp":"+25000","warp_speed":50},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
+        { "level": 0, "hp": 500000 },
+        { "level": 5, "hp": "+25000", "warp_speed": 50 },
+        { "level": 10, "hp": "+0" },
+        { "level": 15, "hp": "+0" },
+        { "level": 20, "hp": "+0" }
       ]
     }
   },
   "Carrier": {
     "Solar Whale": {
       "Solar Whale-A": [
-        {"level":0,"hp":329430},
-        {"level":5,"hp":"+38485","warp_speed":50},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
+        { "level": 0, "hp": 329430 },
+        { "level": 5, "hp": "+38485", "warp_speed": 50 },
+        { "level": 10, "hp": "+0" },
+        { "level": 15, "hp": "+0" },
+        { "level": 20, "hp": "+0" }
       ]
-    },
-    "CV3000": {
-      "CV3000-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Marshal Crux": {
-      "Marshal Crux-A": [
-        {"level":0,"hp":278340},
-        {"level":5,"hp":"+32515","warp_speed":50},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Eternal Heavens": {
-      "Eternal Heavens-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    }
-  },
-  "Battlecruiser": {
-    "Spear of Uranus": {
-      "Spear of Uranus-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Constantine the Great": {
-      "Constantine the Great-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "ST59": {
-      "ST59-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Shield of Plutus": {
-      "Shield of Plutus-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Thunderbolt Star": {
-      "Thunderbolt Star-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Eternal Storm": {
-      "Eternal Storm-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Antonios Swordbearer": {
-      "Antonios Swordbearer-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    }
-  },
-  "Auxiliary Ship": {
-    "FSV830": {
-      "FSV830-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    },
-    "Ediacaran": {
-      "Ediacaran-A": [
-        {"level":0,"hp":0},
-        {"level":5,"hp":"+0"},
-        {"level":10,"hp":"+0"},
-        {"level":15,"hp":"+0"},
-        {"level":20,"hp":"+0"}
-      ]
-    }
-  },
-  "Cruiser": {
-    "Jaeger": {
-      "Jaeger-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Jaeger-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "Conamara Chaos": {
-      "Conamara Chaos-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Conamara Chaos-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "Callisto": {
-      "Callisto-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Callisto-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Callisto-C": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "Ranger": {
-      "Ranger-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Ranger-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "Predator": {
-      "Predator-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Predator-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Predator-C": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "Chimera": {
-      "Chimera-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Chimera-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Chimera-C": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "Io": {
-      "Io-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Io-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "Io-C": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "CAS066": {
-      "CAS066-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "CAS066-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "CAS066-C": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "CAS066-D": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
-    },
-    "KCCPV2.0": {
-      "KCCPV2.0-A": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "KCCPV2.0-B": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "KCCPV2.0-C": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}],
-      "KCCPV2.0-D": [{"level":0,"hp":0},{"level":5,"hp":"+0"},{"level":10,"hp":"+0"},{"level":15,"hp":"+0"},{"level":20,"hp":"+0"}]
     }
   }
 }
