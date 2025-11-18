@@ -5,126 +5,107 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ILG Apex Tracker</title>
 <style>
-  /* General Styles */
+  /* General body */
   body {
     font-family: Georgia, serif;
     margin: 0;
     padding: 0;
     display: flex;
     height: 100vh;
-    background: #f9f9f9;
-    color: #333;
   }
 
   /* Sidebar */
   aside {
     width: 220px;
-    background: #2c2c2c;
-    color: #fff;
-    padding: 20px 15px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    background: #333;       /* dark gray */
+    color: #eee;            /* light text */
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
   }
 
   aside h3 {
     margin-top: 0;
-    font-size: 1.2em;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
   }
 
   aside ul {
     list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
+    padding-left: 0;
   }
 
   aside li {
     cursor: pointer;
-    padding: 8px 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: background 0.2s;
-  }
-
-  aside li:hover {
-    background: #444;
+    padding: 6px 0;
+    border-bottom: 1px solid #444;
   }
 
   aside li.active {
     font-weight: bold;
-    color: #ffd700;
-    background: #444;
+    color: #ffd700;  /* gold highlight */
   }
 
-  /* Main Content */
+  /* Main content */
   main {
     flex: 1;
-    padding: 20px;
     background: #fff;
+    color: #111;
+    padding: 15px;
     overflow-y: auto;
   }
 
-  #search {
+  input#search {
     width: 100%;
-    padding: 8px 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: Georgia, serif;
-    font-size: 1em;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
   }
 
-  /* Ship Cards */
+  /* Ship cards */
   .ship-card {
     border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-    transition: transform 0.1s;
-    background: #fafafa;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f9f9f9;
   }
 
-  .ship-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  .ship-card h4 {
+    margin: 0 0 10px 0;
   }
 
-  /* Variants container */
+  /* Variant container */
   .variants-container {
     display: flex;
-    gap: 10px; /* spacing between variants */
-    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
+  /* Individual variant cards */
   .variant-card {
-    flex: 1; /* each variant takes equal width */
-    border: 1px solid #888;
-    border-radius: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
     padding: 8px;
-    background: #f4f4f4;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    min-width: 140px;
+    background: #fff;
   }
 
   .variant-card strong {
     display: block;
     margin-bottom: 5px;
-    font-size: 0.95em;
+    font-weight: bold;
+  }
+
+  .variant-card ul {
+    padding-left: 15px;
+    margin: 0;
+  }
+
+  .variant-card li {
+    font-size: 13px;
+    margin-bottom: 2px;
   }
 </style>
 </head>
-<body>
-
-<aside>
-  <h3>Ship Classes</h3>
-  <ul id="type-list"></ul>
-</aside>
-
-<main>
-  <input type="text" id="search" placeholder="Search ships...">
-  <div id="ships-container"></div>
-</main>
-
-<script src="script.js"></script>
-</body>
-</html>
+<b
