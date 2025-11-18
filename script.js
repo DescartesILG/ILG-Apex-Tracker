@@ -1,56 +1,86 @@
-const typeList = document.getElementById("type-list");
-const shipsContainer = document.getElementById("ships-container");
-const searchInput = document.getElementById("search");
-
 // Load JSON data
-let shipsData = {}; // you can fetch this from your JSON file or embed it
-
-fetch("ships.json")
+fetch('ships.json')
   .then(response => response.json())
   .then(data => {
-    shipsData = data;
-    renderTypeList();
-    renderShips();
-  });
+    const typeList = document.getElementById('type-list');
+    const shipsContainer = document.getElementById('ships-container');
+    const searchInput = document.getElementById('search');
 
-// Render sidebar type list
-function renderTypeList() {
-  typeList.innerHTML = "";
-  Object.keys(shipsData).forEach(type => {
-    const li = document.createElement("li");
-    li.textContent = type;
-    li.addEventListener("click", () => {
-      document.querySelectorAll("#type-list li").forEach(l => l.classList.remove("active"));
-      li.classList.add("active");
-      renderShips(type);
+    // Populate sidebar with ship classes
+    for (let shipClass in data) {
+      const li = document.createElement('li');
+      li.textContent = shipClass;
+      li.addEventListener('click', () => {
+        document.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        li.classList.add('active');
+        displayShips(shipClass);
+      });
+      typeList.appendChild(li);
+    }
+
+    // Display ships for a given class
+    function displayShips(shipClass) {
+      shipsContainer.innerHTML = '';
+      const classData = data[shipClass];
+
+      for (let shipName in classData) {
+        const shipVariants = classData[shipName];
+
+        // Create main ship card
+        const shipCard = document.createElement('div');
+        shipCard.className = 'ship-card';
+
+        const title = document.createElement('h4');
+        title.textContent = shipName;
+        shipCard.appendChild(title);
+
+        // Variants container
+        const variantsContainer = document.createElement('div');
+        variantsContainer.className = 'variants-container';
+
+        // Loop through variants
+        for (let variantName in shipVariants) {
+          const levels = shipVariants[variantName];
+
+          const variantCard = document.createElement('div');
+          variantCard.className = 'variant-card';
+
+          const variantTitle = document.createElement('strong');
+          variantTitle.textContent = variantName;
+          variantCard.appendChild(variantTitle);
+
+          const statsList = document.createElement('ul');
+          levels.forEach(level => {
+            const li = document.createElement('li');
+            let statsText = `Level ${level.level}: HP ${level.hp}`;
+            if (level.warp_speed) statsText += `, Warp ${level.warp_speed}`;
+            li.textContent = statsText;
+            statsList.appendChild(li);
+          });
+
+          variantCard.appendChild(statsList);
+          variantsContainer.appendChild(variantCard);
+        }
+
+        shipCard.appendChild(variantsContainer);
+        shipsContainer.appendChild(shipCard);
+      }
+    }
+
+    // Search functionality
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      shipsContainer.querySelectorAll('.ship-card').forEach(card => {
+        const name = card.querySelector('h4').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? '' : 'none';
+      });
     });
-    typeList.appendChild(li);
-  });
-}
 
-// Render ships for a given type (or all types)
-function renderShips(filterType = null) {
-  shipsContainer.innerHTML = "";
-  const searchTerm = searchInput.value.toLowerCase();
-
-  const types = filterType ? { [filterType]: shipsData[filterType] } : shipsData;
-
-  Object.entries(types).forEach(([type, ships]) => {
-    Object.entries(ships).forEach(([shipName, variants]) => {
-      // Filter by search
-      if (!shipName.toLowerCase().includes(searchTerm)) return;
-
-      // Create ship card
-      const shipCard = document.createElement("div");
-      shipCard.className = "ship-card";
-
-      const shipTitle = document.createElement("h4");
-      shipTitle.textContent = shipName;
-      shipCard.appendChild(shipTitle);
-
-      // Variants container
-      const variantsContainer = document.createElement("div");
-      variantsContainer.className = "variants-container";
-
-      Object.entries(variants).forEach(([variantName, levels]) => {
-        const
+    // Initially display the first ship class
+    const firstClass = Object.keys(data)[0];
+    if (firstClass) {
+      typeList.querySelector('li').classList.add('active');
+      displayShips(firstClass);
+    }
+  })
+  .catch(err => console.error('Error loading ship data:', err));
